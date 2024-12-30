@@ -51,7 +51,7 @@ export default {
         moveDowns: "moveDowns 6s ease-in-out forwards",
         slideToLeft: "slideToLeft 6s ease-in-out forwards",
         slideToLefts: "slideToLefts 6s ease-in-out forwards",
-
+        
       },
       colors: {
         background: "var(--background)",

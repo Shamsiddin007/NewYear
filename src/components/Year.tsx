@@ -66,7 +66,7 @@ export default function YearTransition() {
           <span className="absolute left-full top-0 sm:animate-moveDown animate-moveDowns sm:text-[200px] text-[140px] drop-shadow-custom-yellow">
             4
           </span>
-          <span className="absolute left-full top-0 sm:animate-moveUp animate-moveUps sm:text-[200px] text-[140px] drop-shadow-custom-yellow">
+          <span className="absolute left-full  top-0 sm:animate-moveUp animate-moveUps sm:text-[200px] text-[140px] drop-shadow-custom-yellow">
             5
           </span>
         </div>

@@ -1,11 +1,20 @@
 "use client";
 import { useState, useEffect } from "react";
 
+interface Star {
+  top: string;
+  left: string;
+  animationDuration: string;
+  delay: string;
+  scale: number;
+  opacity: number;
+}
+
 export default function YearTransition() {
-  const [stars, setStars] = useState([]);
+  const [stars, setStars] = useState<Star[]>([]);
 
   useEffect(() => {
-    const randomPositions = [...Array(100)].map(() => ({
+    const randomPositions: Star[] = [...Array(100)].map(() => ({
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
       animationDuration: `${Math.random() * 2 + 2}s`,
@@ -22,7 +31,7 @@ export default function YearTransition() {
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
           {stars.map((position, index) => (
             <div
-              key={index}
+              key={`${position.top}-${position.left}-${index}`}
               className="star"
               style={{
                 top: position.top,
@@ -37,16 +46,16 @@ export default function YearTransition() {
         </div>
 
         <div className="relative">
-          <span className="text-start absolute sm:left-[-163px] left-[-115px] text-xl font-bold drop-shadow-custom-yellow">
+          <span className="absolute text-start sm:left-[-163px] left-[-115px] text-xl font-bold drop-shadow-custom-yellow">
             365 / 365
           </span>
-          <span className="uppercase absolute sm:left-[36px] left-[20px] text-xl font-bold drop-shadow-custom-yellow">
+          <span className="absolute uppercase sm:left-[36px] left-[20px] text-xl font-bold drop-shadow-custom-yellow">
             Goodbye
           </span>
-          <p className="uppercase absolute sm:hidden sm:top-[195px] top-[130px] -right-[280px] text-black/90 bottom-2 text-xl font-bold animate-slideToLefts drop-shadow-custom-white">
+          <p className="uppercase absolute top-[130px] -right-[280px] text-black/90 text-xl font-bold animate-slideToLefts sm:hidden drop-shadow-custom-white">
             a new beginning
           </p>
-          <p className="uppercase absolute max-sm:hidden sm:top-[195px] top-[130px] -right-[280px] text-black/90 bottom-2 text-xl font-bold animate-slideToLeft drop-shadow-custom-white">
+          <p className="uppercase absolute hidden sm:block sm:top-[195px] -right-[280px] text-black/90 text-xl font-bold animate-slideToLeft drop-shadow-custom-white">
             a new beginning
           </p>
         </div>

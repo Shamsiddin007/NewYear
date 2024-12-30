@@ -22,7 +22,7 @@ export default function YearTransition() {
       scale: Math.random() * 0.5 + 0.5,
       opacity: Math.random() * 0.5 + 0.5,
     }));
-    setStars(randomPositions);
+    setStars(randomPositions); // No error after fixing the type
   }, []);
 
   return (

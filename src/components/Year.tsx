@@ -87,7 +87,7 @@ export default function YearTransition() {
           </div>
         )}
         <div className=" relative">
-          <div className="absolute bottom-[-15px] left-[-212px]">
+          <div className="absolute bottom-[-15px] sm:left-[-212px] left-[-152px]">
             <Music />
           </div>
         </div>

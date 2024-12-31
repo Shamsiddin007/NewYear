@@ -9,19 +9,20 @@ export default {
   theme: {
     extend: {
       dropShadow: {
-        "custom-yellow": "2px 3px 15px grey",
+        "custom-yellow": "2px 3px 15px rgba(0, 0, 0, 0.5)",
         "custom-white": "5px 5px 15px white",
+        'custom-yellows': '2px 3px 15px yellow',
       },
       keyframes: {
         slideToLeft: {
           "0%": { right: "0px", opacity: "0%" },
           "50%": { left: "100px", opacity: "0%" },
-          "100%": { left: "70px", right: "-400px" },
+          "100%": { left: "40px", right: "-400px" },
         },
         slideToLefts: {
          "0%": { left: "0px", opacity: "0%" },
           "50%": { left: "0px", opacity: "0%" },
-          "100%": { left: "0px", right: "-400px" },
+          "100%": { left: "-40px", right: "-200px" },
         },
         moveUp: {
           "0%": { top: "160px", bottom: "100%", left: "345px", opacity: "50%" },
@@ -51,7 +52,7 @@ export default {
         moveDowns: "moveDowns 6s ease-in-out forwards",
         slideToLeft: "slideToLeft 6s ease-in-out forwards",
         slideToLefts: "slideToLefts 6s ease-in-out forwards",
-        
+
       },
       colors: {
         background: "var(--background)",
